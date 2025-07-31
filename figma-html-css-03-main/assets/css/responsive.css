@@ -1,10 +1,13 @@
 /* PC */
 
 @media (max-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
 }
 
 /* tablet vaf mobile */
-@media (min-width: 991.98px) {
+@media (max-width: 991.98px) {
   /* 1 ẩn thanh navbar */
   .navbar {
     display: none;
@@ -38,11 +41,49 @@
     /* opacity=0 vần tương tác được thì dùng visibility: hidden;  */
     opacity: 0;
     visibility: hidden;
+    transition: 0.5s;
+    z-index: 1;
   }
   /* 5 hiện overplay */
   .menu-checkbox:checked ~ .menu-overlay {
     opacity: 1;
     visibility: visible;
+  }
+
+  /* 6. nền menu-content */
+  .menu-drawer {
+    position: fixed;
+    inset: 0 40% 0 0;
+    background-color: rgb(31, 5, 5);
+    transform: translateX(-100%);
+    transition: 0.5s;
+    z-index: 2;
+    padding: 60px;
+  }
+  /* 7. kiểm tra hiện menu-drawer */
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+
+  /* 8 code menu-top*/
+  .close-menu {
+    width: 3rem;
+  }
+  .menu-drawer__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+  }
+  #navbar__link--mobile {
+    margin-top: 25px;
+    transition: 0.25s;
+  }
+  .navbar__link {
+    display: block;
+  }
+  .navbar__link:hover {
+    background-color: #00ffff37;
   }
 }
 
