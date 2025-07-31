@@ -1,12 +1,12 @@
 /* PC */
 
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   .mobile-header {
     display: none;
   }
 }
 
-/* tablet vaf mobile */
+/* tablet và mobile */
 @media (max-width: 991.98px) {
   /* 1 ẩn thanh navbar */
   .navbar {
@@ -85,6 +85,66 @@
   .navbar__link:hover {
     background-color: #00ffff37;
   }
+
+  /* 9 code phần hero */
+  .hero {
+    flex-direction: column;
+  }
+  .hero__media {
+    order: 1;
+  }
+
+  .hero__content {
+    order: 2;
+    margin: 22px auto;
+    width: 80%;
+    text-align: center;
+  }
+  .hero__row {
+    justify-content: center;
+  }
+
+  /* khối service */
+  .service__row {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .service__img {
+    width: 100%;
+  }
+
+  .service-item {
+    width: 90%;
+    text-align: start;
+  }
+  .service__list {
+    text-align: center;
+  }
+  /* work-list */
+
+  .work__list {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  /* about */
+  .about__body {
+    flex-direction: column;
+  }
+
+  .about-media {
+    width: 100%;
+  }
+
+  .about-media__small {
+    display: none;
+  }
+  .about-media__lager {
+    width: 100%;
+  }
+  .about-content {
+    width: 90%;
+    text-align: center;
+  }
 }
 
 /* table  */
@@ -98,8 +158,6 @@
 
 /* ẩn những cái không liên quan */
 
-.footer,
-.hero,
-main {
+.footer {
   display: none;
 }
