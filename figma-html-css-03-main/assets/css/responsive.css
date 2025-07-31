@@ -28,22 +28,22 @@
     width: 3rem;
     color: #fff;
     cursor: pointer;
-}
+  }
 
-/* 4. ẩn overlay */
-.menu-overlay{
+  /* 4. ẩn overlay */
+  .menu-overlay {
     position: fixed;
     background: rgba(0, 0, 0, 0.3);
     inset: 0;
     /* opacity=0 vần tương tác được thì dùng visibility: hidden;  */
     opacity: 0;
     visibility: hidden;
-}
-/* 5 hiện overplay */
-.menu-checkbox:checked ~ .menu-overlay{
+  }
+  /* 5 hiện overplay */
+  .menu-checkbox:checked ~ .menu-overlay {
     opacity: 1;
     visibility: visible;
-}
+  }
 }
 
 /* table  */
