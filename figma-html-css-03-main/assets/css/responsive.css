@@ -145,11 +145,56 @@
     width: 90%;
     text-align: center;
   }
+  /* team-list */
+  .team__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team-item__thumb {
+    margin: 0 auto;
+  }
+  /* install */
+  .install__img {
+    display: none;
+  }
+  .install__content {
+    width: 90%;
+    margin: 0 auto;
+  }
+  /* blog */
+  .blog__inner {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .blog__list {
+    order: 1;
+    margin: 0 auto;
+  }
+
+  .blog__content {
+    order: 2;
+    align-items: center;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .blog__heading {
+    max-width: 100%;
+  }
+  .blog__list {
+    width: 90%;
+  }
 }
 
 /* table  */
 
 @media (min-width: 768px) and (max-width: 991.98px) {
+  .header-footer__column {
+    display: none;
+  }
+  .footer-top {
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+  }
 }
 
 /* mobile */
@@ -157,7 +202,3 @@
 }
 
 /* ẩn những cái không liên quan */
-
-.footer {
-  display: none;
-}
